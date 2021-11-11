@@ -1,0 +1,459 @@
+@import 'settings.css';
+
+
+
+body{
+    background: var(--main-background);
+    background-color: rgb(246,246,246);
+}
+
+li.navigate>a:link { 
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+li.navigate>a {
+    color: black;
+}
+li.navigate>a:after {
+    display: block;
+    content: "";
+    background-color: orange;
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+li.navigate>a:hover:after,
+li.navigate>a:focus:after {
+    width: 100%;
+}
+
+/* -------------------------- end -------------------- */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5vw;
+
+}
+header {    
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://s1.1zoom.ru/big0/709/Soups_Cabbage_White_background_591978_1280x853.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*pallax scrolling effect */
+}
+
+.bot-header, ul.navigate-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul.navigate-all {
+    width: 15vw;
+    text-align: center;
+    list-style-type: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    font-size: 30px;
+}
+
+li.navigate {
+    padding: 5px;
+}
+.logotip>img{
+    width: 300px;
+}
+
+/* -------------------------------------end============--------------- */
+
+.new {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-allmenu2 {
+    text-align: center;
+    width: 650px;
+    font-size: 4vh;
+    margin: 0;   
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
+    font-family: 'Rubik', sans-serif;
+}
+/* - -------- - - - -===========-------------- - - -    - - -*/
+
+
+.element-menu { 
+    box-shadow: 0 4px 8px 10px rgba(0,0,0,0.2);  
+    border-radius: 10px; 
+    padding: 5px; 
+    margin: 5%; 
+    transition: 0.3s; 
+    max-height: 225px;
+    max-width: 325px;
+} 
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.food { 
+    width: 100%; 
+    max-height: 175px;
+}
+.element-menu:hover { 
+    box-shadow: 0 6px 14px 10px rgba(0,0,0,0.2); 
+} 
+.price-el-menu, .title-el-menu {
+    text-align: center;
+}
+@media screen and (max-width: 700px) {
+    .box {
+        grid-template-columns: 1fr 1fr;
+    }
+    .element-3 {
+        display: none;
+    }
+    body {
+        width: 100vh;
+    }
+}
+
+/* - -------- - - - -===========-------------- - - -    - - -*/
+
+
+
+#gor-blud{
+    grid-area: gor-blud;
+}
+
+#gornir{
+    grid-area: gornir;
+}
+
+#soup{
+    grid-area: soup;
+}
+#salat{
+    grid-area: salat;
+}
+#vipech {
+    grid-area: vipech;
+}
+
+
+main.main-menu{
+    display: grid;
+    grid-template-areas:
+    "gor-blud . gornir"
+    "gor-blud . soup"
+    "gor-blud . vipech"
+    "salat . vipech"
+    ;
+}
+.container {
+    font-family: 'Rubik', sans-serif;
+}
+.all-menuall {
+    display: none; 
+    max-width: 1250px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+}
+
+.wrapper {
+    /* display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-areas: 
+    "name-blud cost";
+    width: 80%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.name-gor{
+    grid-area: name-blud;
+}
+.cost {
+    grid-area: cost;
+}
+
+
+.title-menu {
+    font-size: 30px;
+    color: orange;
+    border-bottom: 1px solid orange;
+    font-family: 'title-fonts';
+    width: 45%;
+
+}
+
+.name-gor {
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ---------------------------end--------------------------- */
+
+
+
+/* ---------------------------btn--------------------------- */
+b {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    position: relative;
+    border: 2px solid #f1c40f;
+    font-family: 'Montserrat', sans-serif; 
+    transition: .4s;
+    
+  }
+  b:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0,0,0,0);
+    transition: .4s;
+  }
+  .button-container b:hover:after {
+    border-color: #f1c40f;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+  }
+
+#off-menu {
+    display: none;
+}
+.btn-for_menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+    
+}
+
+.menu-all {
+    text-decoration: none;
+    display: inline-block;
+    width: 220px;
+    height: 90px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+  }
+  .menu-all:hover {
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    color: white;
+  }
+
+
+/* ---------------------------end--------------------------- */
+
+.box-about{
+    width: 100%;
+    height: 50vh;
+    background-image: url(https://img4.goodfon.ru/original/2560x1707/7/9d/eda-makro-fon.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; pallax scrolling effect */
+    margin-top: 10vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+.text-img {
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 7vh;
+}
+
+.txt1 {
+    text-align: center;
+    font-size: 4vh;
+    padding-top: 4vh;
+}
+.text-about {
+    font-size: 20px;
+    align-items: center;
+    color: white;
+}
+
+.title-polo {
+    font-family: 'Rubik', sans-serif;
+    margin-top: 7vh;
+}
+
+.text-polo {
+    margin-top: 11vh;
+    margin-bottom: 8vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.pomin-all {
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    min-height: 600px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+}
+.side {
+    display: flex;
+    background-color: white;
+    text-align: center;
+}
+
+.not-logotip>img{
+    width: 100%;
+    height: 100%;
+}
+
+.left-side {
+    display: grid;
+    grid-template-areas: 
+    "block"
+    "under"
+    "btn";
+    font-family: 'Rubik', sans-serif;
+}
+.title-block {
+    text-align: center
+}
+.top-title {
+    font-size: 30px;
+    color: gray;
+    border-bottom: 2px solid orange;
+    display: inline-block;
+    font-family: 'title-fonts';
+    margin: 50px;
+}
+.title-pomin {
+    font-size: 40px;  
+    padding-bottom: 50px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.block-menu {
+    font-size: 25px;
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+}
+.under-block {
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+}
+#pomin {
+    background-color: #dfe6e9;
+}
+
+
+
+/*-------------------------------------- адоптивность----------------------*/
+
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:30%;
+    position:relative;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.logotip-foot>img{
+    height: 150px;
+    width: 200px;
+} 
+
+
+.all-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: gray;
+    height: 100%;
+}
+
+
+.t-foot {
+    color: white;
+    margin-top: 5%;
+    font-size: 3vh;
+}
+.t-s {
+    margin-top: 15px;
+}
+
+
+
+
+.s-foot {
+    margin-top: 5%;
+}
+
+li.navigat>a:link { 
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+li.navigat>a {
+    color: white;
+    font-size: 3vh;
+}
+li.navigat>a:after {
+    display: block;
+    content: "";
+    background-color: orange;
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+li.navigat>a:hover:after,
+li.navigat>a:focus:after {
+    width: 30%;
+}
